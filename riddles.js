@@ -1,5 +1,5 @@
 function game() {
-	var riddles = ["Everyone has it and no one can lose it, what is it?",
+    var riddles = ["Everyone has it and no one can lose it, what is it?",
 	"What has a neck but no head?",
 	"What has a face and two hands but no arms or legs?",
 	"What has a thumb and four fingers but is not alive?",
@@ -24,7 +24,7 @@ function game() {
 	"What goes up and doesn't come back down?",
 	"Your mother's brother's only brother-in-law is asleep on your couch. Who is asleep on your couch?",
 	"What belongs to you but is used more by others?"];
-	var answers = ["shadow",
+    var answers = ["shadow",
 	"bottle",
 	"clock",
 	"glove",
@@ -49,21 +49,21 @@ function game() {
 	"age",
 	"father",
 	"name"]
-	
-	var correct = true;
-	
-	while (correct)  {
-		var x = Math.floor(Math.random()*riddles.length);
-		var userAnswer = prompt(riddles[x]);
-		if (userAnswer !== answers[x]) {
-			sweetAlert("You have answered incorrectly. You lose!");
-			correct = false;
-		} else {
-			riddles.splice(x,1);
-			answers.splice(x,1);
-			if (correct === false) {
-				sweetAlert("You have answered all 25 riddles correctly! You win!");
-			}
-		}
-	}
+
+    var correct = true;
+
+    while (correct) {
+        var x = Math.floor(Math.random() * riddles.length);
+        var userAnswer = prompt(riddles[x]);
+        if (userAnswer !== answers[x]) {
+            sweetAlert("You have answered incorrectly. You lose!");
+            correct = false;
+        } else {
+            riddles.splice(x, 1);
+            answers.splice(x, 1);
+            if (correct === false) {
+                sweetAlert("You have answered all 25 riddles correctly! You win!");
+            }
+        }
+    }
 }
